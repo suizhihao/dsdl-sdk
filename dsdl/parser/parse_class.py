@@ -1,8 +1,10 @@
-from .utils import *
-from dsdl.exception import DefineSyntaxError
-from dataclasses import dataclass, field
 import re
+from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
+from dsdl.exception import DefineSyntaxError
+
+from .utils import *
 
 
 @dataclass()

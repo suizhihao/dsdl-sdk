@@ -1,7 +1,8 @@
 import numpy as np
-from PIL import ImageFont, ImageDraw
-from .registry import CLASSDOMAIN
+from PIL import ImageDraw, ImageFont
+
 from .base_geometry import BaseGeometry
+from .registry import CLASSDOMAIN
 
 
 class Label(BaseGeometry):

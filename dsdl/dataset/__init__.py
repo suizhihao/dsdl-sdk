@@ -1,6 +1,6 @@
 from .base_dataset import Dataset
-from .utils.commons import Util
 from .demo_dataset import DemoDataset
+from .utils.commons import Util
 from .utils.visualizer import ImageVisualizePipeline
 
 __all__ = [

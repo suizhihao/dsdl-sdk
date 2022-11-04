@@ -1,7 +1,9 @@
-from dsdl.exception import DefineSyntaxError, DefineTypeError
-from .utils import *
 from dataclasses import dataclass
 from typing import Optional, Set
+
+from dsdl.exception import DefineSyntaxError, DefineTypeError
+
+from .utils import *
 
 
 @dataclass()

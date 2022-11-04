@@ -1,6 +1,6 @@
+from .class_domain_attributes import Skeleton
 from .label import Label
 from .registry import CLASSDOMAIN, LABEL
-from .class_domain_attributes import Skeleton
 
 CLASSDOMAIN_ATTRIBUTES = {
     "Skeleton": Skeleton,

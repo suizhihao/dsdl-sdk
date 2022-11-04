@@ -1,4 +1,4 @@
-from .parser import parse, dsdl_parse
+from .parser import dsdl_parse, parse
 
 __all__ = [
     "parse",

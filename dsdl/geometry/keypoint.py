@@ -1,10 +1,12 @@
-from .label import Label
-from .class_domain import ClassDomain
-from .base_geometry import BaseGeometry
 from typing import List
-from ..exception import ClassNotFoundError
-from PIL import ImageDraw
+
 import numpy as np
+from PIL import ImageDraw
+
+from ..exception import ClassNotFoundError
+from .base_geometry import BaseGeometry
+from .class_domain import ClassDomain
+from .label import Label
 
 
 class Coord2D(BaseGeometry):

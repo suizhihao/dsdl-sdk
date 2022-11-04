@@ -1,6 +1,6 @@
+from ..exception import ValidationError
 from .field import Field
 from .struct import Struct
-from ..exception import ValidationError
 
 
 class BoolField(Field):

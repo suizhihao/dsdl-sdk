@@ -1,11 +1,13 @@
-from .base_geometry import BaseGeometry
-from .utils import bytes_to_numpy
-from ..exception import FileReadError
+import io
+
 import numpy as np
 from PIL import Image
-import io
-from .label import LabelList
+
+from ..exception import FileReadError
+from .base_geometry import BaseGeometry
 from .box import BBox
+from .label import LabelList
+from .utils import bytes_to_numpy
 
 
 class SegmentationMap(BaseGeometry):

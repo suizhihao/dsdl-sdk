@@ -1,10 +1,10 @@
-from typing import Optional, Dict, Tuple, List
 import os
 from collections import defaultdict
-
-from .parser import Parser
-from ...geometry import LabelList, BBox
 from copy import deepcopy
+from typing import Dict, List, Optional, Tuple
+
+from ...geometry import BBox, LabelList
+from .parser import Parser
 
 
 class VisualizerUtil:

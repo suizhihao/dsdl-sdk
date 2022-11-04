@@ -1,12 +1,12 @@
+from .attrbutes import Attributes
 from .box import BBox
+from .class_domain import ClassDomain
+from .keypoint import Coord2D, KeyPoints
 from .label import Label, LabelList
 from .media import ImageMedia
 from .polygon import Polygon, PolygonItem
-from .attrbutes import Attributes
+from .registry import CLASSDOMAIN, LABEL, STRUCT
 from .segmap import SegmentationMap
-from .keypoint import Coord2D, KeyPoints
-from .registry import STRUCT, CLASSDOMAIN, LABEL
-from .class_domain import ClassDomain
 
 __all__ = [
     "BBox",

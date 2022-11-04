@@ -1,7 +1,7 @@
-from .field import Field
-from ..geometry import Attributes, STRUCT
 from ..exception import ValidationError
+from ..geometry import STRUCT, Attributes
 from ..warning import FieldNotFoundWarning
+from .field import Field
 
 
 class StructMetaclass(type):

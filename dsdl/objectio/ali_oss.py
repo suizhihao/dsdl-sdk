@@ -1,6 +1,8 @@
-import oss2
 import os
 from contextlib import contextmanager
+
+import oss2
+
 from .base import BaseFileReader
 
 

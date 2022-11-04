@@ -1,10 +1,11 @@
-from typing import Set, List, Dict, Optional
-from dataclasses import dataclass, field
 import re
-from dsdl.exception import DefineSyntaxError
 from collections import defaultdict
-from .utils import sort_nx, TYPES_ALL
-from dsdl.exception import ValidationError
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional, Set
+
+from dsdl.exception import DefineSyntaxError, ValidationError
+
+from .utils import TYPES_ALL, sort_nx
 
 
 @dataclass()

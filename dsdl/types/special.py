@@ -1,7 +1,8 @@
-from .field import Field
-from ..geometry import BBox, Polygon, PolygonItem, Coord2D, KeyPoints
+from datetime import date, datetime, time
+
 from ..exception import ValidationError
-from datetime import date, time, datetime
+from ..geometry import BBox, Coord2D, KeyPoints, Polygon, PolygonItem
+from .field import Field
 
 
 def validate_list_of_number(value, size_limit, item_type):

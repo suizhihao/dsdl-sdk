@@ -1,16 +1,16 @@
-from .struct import Struct
-from .generic import StrField, IntField, BoolField, NumField, ListField
+from .generic import BoolField, IntField, ListField, NumField, StrField
 from .special import (
-    LabelField,
-    CoordField,
-    Coord3DField,
-    IntervalField,
     BBoxField,
-    PolygonField,
+    Coord3DField,
+    CoordField,
     DateField,
-    TimeField,
+    IntervalField,
     KeypointField,
+    LabelField,
+    PolygonField,
+    TimeField,
 )
+from .struct import Struct
 from .unstructure import ImageField, SegMapField
 
 __all__ = [

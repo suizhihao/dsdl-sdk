@@ -1,9 +1,12 @@
+from typing import Any, Callable, Dict, List, Optional, Union
+
 import torch.utils.data
-from ..types import Struct
-from ..geometry import STRUCT
-from dsdl.dataset.utils import Util
+
 import dsdl.objectio as objectio
-from typing import List, Dict, Any, Callable, Optional, Union
+from dsdl.dataset.utils import Util
+
+from ..geometry import STRUCT
+from ..types import Struct
 
 try:
     from yaml import CSafeLoader as YAMLSafeLoader

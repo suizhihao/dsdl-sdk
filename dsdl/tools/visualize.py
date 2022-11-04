@@ -1,17 +1,21 @@
-from dsdl.dataset import Dataset, ImageVisualizePipeline, Util
-import click
-import numpy as np
-from random import randint
-import cv2
 import os
+from random import randint
+
+import click
+import cv2
+import numpy as np
+
+from dsdl.dataset import Dataset, ImageVisualizePipeline, Util
 
 try:
     from yaml import CSafeLoader as YAMLSafeLoader
 except ImportError:
     from yaml import SafeLoader as YAMLSafeLoader
+
 from yaml import load as yaml_load
-from .commons import OptionEatAll, load_samples
+
 from ..parser import dsdl_parse
+from .commons import OptionEatAll, load_samples
 
 
 @click.command()

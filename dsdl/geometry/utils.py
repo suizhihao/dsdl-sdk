@@ -1,7 +1,9 @@
-import numpy as np
-from PIL import Image, ExifTags
-from typing import Tuple, Any
 import io
+from typing import Any, Tuple
+
+import numpy as np
+from PIL import ExifTags, Image
+
 from ..exception import FileReadError
 
 

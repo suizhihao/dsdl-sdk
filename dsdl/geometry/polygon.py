@@ -1,6 +1,8 @@
 from typing import List
+
 import numpy as np
-from PIL import ImageDraw, Image
+from PIL import Image, ImageDraw
+
 from .base_geometry import BaseGeometry
 
 

@@ -1,17 +1,20 @@
-import click
-from abc import ABC, abstractmethod
-from yaml import load as yaml_load
-from dsdl.exception import ValidationError, DefineSyntaxError
-from dsdl.warning import DuplicateDefineWarning
 import os
+from abc import ABC, abstractmethod
+from collections import defaultdict
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Union, Optional
-from collections import defaultdict
-from .utils import *
+from typing import Optional, Union
+
+import click
+from yaml import load as yaml_load
+
+from dsdl.exception import DefineSyntaxError, ValidationError
+from dsdl.warning import DuplicateDefineWarning
+
+from .parse_class import EleClass, ParserClass
+from .parse_field import EleStruct, ParserField
 from .parse_params import ParserParam
-from .parse_field import ParserField, EleStruct
-from .parse_class import ParserClass, EleClass
+from .utils import *
 
 try:
     from yaml import CSafeLoader as YAMLSafeLoader

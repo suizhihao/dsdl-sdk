@@ -1,13 +1,16 @@
-import click
-from typing import Sequence, Union
 import os
+from typing import Sequence, Union
+
+import click
+
 try:
     from yaml import CSafeLoader as YAMLSafeLoader
 except ImportError:
     from yaml import SafeLoader as YAMLSafeLoader
-from yaml import load as yaml_load
+
 import json
 
+from yaml import load as yaml_load
 
 
 class OptionEatAll(click.Option):

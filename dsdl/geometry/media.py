@@ -1,5 +1,7 @@
 import io
+
 from PIL import Image
+
 from ..exception import FileReadError
 from .base_geometry import BaseGeometry
 from .utils import bytes_to_numpy

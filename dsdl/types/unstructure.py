@@ -1,5 +1,5 @@
-from .field import Field
 from ..geometry import ImageMedia, SegmentationMap
+from .field import Field
 
 
 class FileReader(object):

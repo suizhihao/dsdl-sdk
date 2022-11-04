@@ -1,7 +1,7 @@
 import re
-import networkx as nx
 from typing import Dict, List
 
+import networkx as nx
 
 TYPES_WITHOUT_PARS = [
     "Bool",

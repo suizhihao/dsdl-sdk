@@ -1,6 +1,8 @@
 import re
-from dsdl.types.field import Field
+
 from prettytable import PrettyTable
+
+from dsdl.types.field import Field
 
 
 class Util:
