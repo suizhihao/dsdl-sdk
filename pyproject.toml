@@ -1,93 +1,104 @@
+[tool]
 [tool.poetry]
-name = "ccpkg"
-version = "0.0.1"
-description = "My Python package to help you get up to speed."
-authors = ["suizhihao <sui@1.com>"]
-license = "MIT"
+name = "dsdl-sdk"
+version = "0.1.0"
+homepage = "https://github.com/suizhihao/dsdl-sdk"
+description = " ."
+authors = ["suizhihao <suizhihao@pjlab.org.cn>"]
 readme = "README.md"
-repository = "https://github.com/suizhihao/ccpkg"
-documentation = "https://ccpkg.readthedocs.io"
-classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
-    "Intended Audience :: Developers",
-    "Natural Language :: English",
-    "Operating System :: OS Independent",
-    "Topic :: Software Development :: Libraries",
+license =  "Apache-2.0"
+classifiers=[
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: Apache Software License',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
 ]
 packages = [
-    { include = "ccpkg", from = "src" },
+    { include = "dsdl_sdk" },
+    { include = "tests", format = "sdist" },
 ]
-
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/suizhihao/ccpkg/issues"
-"Changelog" = "https://github.com/suizhihao/ccpkg/blob/main/CHANGELOG.md"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">=3.6.2,<4.0"
 
-# Documentation Dependencies
-Sphinx = {version = "^5.0", optional = true}
-sphinx-rtd-theme = {version = "^1.0", optional = true}
-myst-parser = {version = "^0.18", optional = true}
+black  = { version = "^21.5b2", optional = true}
+isort  = { version = "^5.8.0", optional = true}
+flake8  = { version = "^3.9.2", optional = true}
+flake8-docstrings = { version = "^1.6.0", optional = true }
+mypy = {version = "^0.900", optional = true}
+pytest  = { version = "^6.2.4", optional = true}
+pytest-cov  = { version = "^2.12.0", optional = true}
+tox  = { version = "^3.20.1", optional = true}
+virtualenv  = { version = "^20.2.2", optional = true}
+pip  = { version = "^20.3.1", optional = true}
+mkdocs  = { version = "^1.1.2", optional = true}
+mkdocs-include-markdown-plugin  = { version = "^1.0.0", optional = true}
+mkdocs-material  = { version = "^6.1.7", optional = true}
+mkdocstrings  = { version = "^0.15.2", optional = true}
+mkdocs-material-extensions  = { version = "^1.0.1", optional = true}
+twine  = { version = "^3.3.0", optional = true}
+mkdocs-autorefs = {version = "^0.2.1", optional = true}
+pre-commit = {version = "^2.12.0", optional = true}
+toml = {version = "^0.10.2", optional = true}
+bump2version = {version = "^1.0.1", optional = true}
 
 [tool.poetry.extras]
-docs = [
-    "myst-parser",
-    "sphinx",
-    "sphinx-rtd-theme",
-]
+test = [
+    "pytest",
+    "black",
+    "isort",
+    "mypy",
+    "flake8",
+    "flake8-docstrings",
+    "pytest-cov"
+    ]
 
-[tool.poetry.dev-dependencies]
-pytest = "^7.0"
-pytest-cov = "^3.0"
+dev = ["tox", "pre-commit", "virtualenv", "pip", "twine", "toml", "bump2version"]
 
-[tool.semantic_release]
-branch = "main"
-version_toml = "pyproject.toml:tool.poetry.version"
-version_variable = "src/ccpkg/__init__.py:__version__"
-build_command = "pip install poetry && poetry build"
+doc = [
+    "mkdocs",
+    "mkdocs-include-markdown-plugin",
+    "mkdocs-material",
+    "mkdocstrings",
+    "mkdocs-material-extension",
+    "mkdocs-autorefs"
+    ]
 
-[tool.pytest.ini_options]
-addopts = "-v -Wdefault --cov=ccpkg --cov-report=term-missing:skip-covered"
-pythonpath = ["src"]
-
-[tool.coverage.run]
-branch = true
-
-[tool.coverage.report]
-exclude_lines = [
-    "pragma: no cover",
-    "@overload",
-    "if TYPE_CHECKING",
-    "raise NotImplementedError",
-]
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
 
 [tool.isort]
-profile = "black"
-known_first_party = ["ccpkg", "tests"]
-
-[tool.mypy]
-check_untyped_defs = true
-disallow_any_generics = true
-disallow_incomplete_defs = true
-disallow_untyped_defs = true
-mypy_path = "src/"
-no_implicit_optional = true
-show_error_codes = true
-warn_unreachable = true
-warn_unused_ignores = true
-exclude = [
-    'docs/.*',
-    'setup.py',
-]
-
-[[tool.mypy.overrides]]
-module = "tests.*"
-allow_untyped_defs = true
-
-[[tool.mypy.overrides]]
-module = "docs.*"
-ignore_errors = true
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 120
+skip_gitignore = true
+# you can skip files as below
+#skip_glob = docs/conf.py
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
