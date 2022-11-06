@@ -3,6 +3,7 @@
 #from helloworld_demo.helloworld import ImageClassificationSample
 #from PIL import Image
 #import io
+import pytest
 
 '''
 def test_data_check():
@@ -13,4 +14,4 @@ def test_data_check():
         print(item.val, type(item.val), item.i_val, item.p, item.date, item.i_list, item.item_list)
 '''
 if __name__ == '__main__':
-    pass
+    assert pytest.main(['-s', 'test_types.py']) != 0

@@ -76,6 +76,7 @@ doc = [
     "mkdocs-material-extension",
     "mkdocs-autorefs",
     "jinja2",
+    "markupsafe",
 ]
 
 [tool.black]
