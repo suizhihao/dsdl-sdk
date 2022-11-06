@@ -78,6 +78,12 @@ doc = [
     "jinja2",
 ]
 
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "serial",
+]
+
 [tool.black]
 line-length = 120
 skip-string-normalization = true
