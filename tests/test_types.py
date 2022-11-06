@@ -13,5 +13,9 @@ def test_data_check():
     for item in dataset.get_sample_list():
         print(item.val, type(item.val), item.i_val, item.p, item.date, item.i_list, item.item_list)
 '''
+
+def test_equal():
+    assert 1==1
+
 if __name__ == '__main__':
-    assert pytest.main(['-s', 'test_types.py']) != 0
+    test_equal()    
