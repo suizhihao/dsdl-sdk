@@ -38,6 +38,7 @@ setup(
         "prettytable>=3.3.0",
         "opencv-python>=4.6.0.66",
         "jinja2">="2.11.3",
+        "marupsafe" >= "2.0.1",
     ],
     classifiers=[
         "Programming Language :: Python :: 3.8",
