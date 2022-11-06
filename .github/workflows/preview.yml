@@ -32,15 +32,15 @@ jobs:
           pip install poetry tox tox-gh-actions
 
       - name: test with tox
-        run:
         continue-on-error: true
+        run:
           tox
       
       # - name: Check if 'Lint with flake8' step failed
       #   if: steps.flake8.outcome != 'success'
       #     run: |
       #       echo "flake8 fails"
-      #       exit 1
+      #       exit 
 
       - name: Build wheels and source tarball
         run: |
